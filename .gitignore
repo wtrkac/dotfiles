@@ -1,0 +1,7 @@
+vim/tmp/*
+!.gitkeep
+vim/bundle/vimproc
+vim/backup/*
+!.gitkeep
+vim/undo/*
+!.gitkeep

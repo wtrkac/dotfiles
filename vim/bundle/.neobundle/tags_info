@@ -1,0 +1,14 @@
+jellybeans.vim
+neobundle.vim
+neocomplcache.vim
+neomru.vim
+neosnippet-snippets
+neosnippet.vim
+shabadou.vim
+unite-quickfix
+unite.vim
+vim-airline
+vim-easymotion
+vim-indent-guides
+vim-quickrun
+vimproc
