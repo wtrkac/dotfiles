@@ -32,7 +32,7 @@ endfunction
 "     *警告がでるかも．set autoread をしておくとよいっぽい
 "
 " s:OutputWindowを開いたり閉じたりする
-let s:ResultFile = "./Result.out"
+let s:ResultFile = "Result.out"
 "let s:TmpResultFile = s:ResultFile
 " 実行結果を出力するファイル名をここで決めている
 " 以下の関数OpenCloseQuickResultと関数Executeで共有されている
@@ -71,7 +71,7 @@ function! Execute(...)
 			let l:time = strftime("%Y_%H:%M")
 			let l:firstline = "[" . l:time . "] " . l:cmd
 			silent execute ":!echo " . l:firstline . " > " . s:ResultFile
-			silent execute ":read!" . l:cmd .       " >> " . s:ResultFile
+			silent execute ":read!" . l:cmd .       " &>> " . s:ResultFile
 			" 結果のファイルを表示する
 			call OpenCloseQuickResult("open")
 "	elseif &filetype == "gpi" || &filetype == "plt"

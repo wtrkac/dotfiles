@@ -84,9 +84,11 @@ let g:indent_guides_start_level=2
 " 自動での色付けを停止，奇数列と偶数列で色をかえるため
 let g:indent_guides_auto_colors=0
 " 奇数列の色
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444433 ctermbg=lightblue
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444433 ctermbg=darkgray
 " 偶数列の色
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=lightcyan
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=blue
+" ターミナルの背景とかで見栄えの良さが変わるので
+" :so $VIMRUNTIME/syntax/colortest.vim を参考にして設定すると良いかも
 " ハイライトする色の変化の幅
 let g:indent_guides_color_change_percent = 30
 " 色付けする文字数
