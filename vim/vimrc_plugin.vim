@@ -13,8 +13,8 @@
 if has('vim_starting')
 	set nocompatible
 	" neobundleがない場合gitコマンドを用いてインストールする
-	if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-		:call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+	if !isdirectory(expand("~/dotfiles/vim/bundle/neobundle.vim/"))
+		:call system("git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/bundle/neobundle.vim")
 	endif
    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -65,10 +65,10 @@ syntax on
 " プラグインの設定
 "################################################################################
 
-source ~/.vim/vimrc_plugin_config_neocomplcache.vim
-source ~/.vim/vimrc_plugin_config_neosnippet.vim
-source ~/.vim/vimrc_plugin_config_unite.vim
-source ~/.vim/vimrc_plugin_config_quickrun.vim
+source ~/dotfiles/vim/vimrc_plugin_config_neocomplcache.vim
+source ~/dotfiles/vim/vimrc_plugin_config_neosnippet.vim
+source ~/dotfiles/vim/vimrc_plugin_config_unite.vim
+source ~/dotfiles/vim/vimrc_plugin_config_quickrun.vim
 "
 "" ~~~.texファイルをlatexのファイルと認識する?
 "let g:tex_flavor='latex'
