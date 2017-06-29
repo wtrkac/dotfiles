@@ -1,6 +1,6 @@
 vim/tmp/*
 !.gitkeep
-vim/bundle/vimproc
+vim/bundle
 vim/backup/*
 !.gitkeep
 vim/undo/*
