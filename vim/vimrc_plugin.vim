@@ -16,7 +16,7 @@ if has('vim_starting')
 	if !isdirectory(expand("~/dotfiles/vim/bundle/neobundle.vim/"))
 		:call system("git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/bundle/neobundle.vim")
 	endif
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
+   set runtimepath+=~/dotfiles/vim/bundle/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/dotfiles/vim/bundle'))
