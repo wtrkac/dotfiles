@@ -77,8 +77,9 @@ source ~/dotfiles/vim/vimrc_plugin_config_quickrun.vim
 "" vim-indent-guides {{{
 " CUIではあまり美しくないように見えるので使うのを止める
 " -> t_Co = 256とするとちょっといい感じになったのでやっぱり使ってみる
-" Vim起動時にvim-indent-guidesも起動
-let g:indent_guides_enable_on_vim_startup=1
+" -> やっぱりうざい。使用を止める。
+" Vim起動時にvim-indent-guidesも起動する/しない=1/0
+let g:indent_guides_enable_on_vim_startup=0
 " ガイドするレベル
 let g:indent_guides_start_level=2
 " 自動での色付けを停止，奇数列と偶数列で色をかえるため

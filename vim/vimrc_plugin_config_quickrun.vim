@@ -42,6 +42,6 @@ nnoremap <expr><silent> <C-C> quickrun#is_running() ?  quickrun#sweep_sessions()
 " プログラムに引数を渡したいときにつかう
 map \R :<C-u>QuickRun -args<SPACE>
 " 時間を計測してくれるらしい
-let g:quickrun_config = {'_': {'hook/time/enable': '1'},}
+"let g:quickrun_config = {'_': {'hook/time/enable': '1'},}
 " }}}
 
