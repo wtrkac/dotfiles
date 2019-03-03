@@ -11,7 +11,8 @@
 "################################################################################
 " neobunbleによるプラグイン管理
 if has('vim_starting')
-	set nocompatible
+"	上流でnocompatibleしているはずなのでなくていよい，と思う
+"	set nocompatible
 	" neobundleがない場合gitコマンドを用いてインストールする
 	if !isdirectory(expand("~/dotfiles/vim/bundle/neobundle.vim/"))
 		:call system("git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/bundle/neobundle.vim")
@@ -47,7 +48,10 @@ NeoBundle 'osyo-manga/shabadou.vim'
 NeoBundle "osyo-manga/unite-quickfix"
 "
 NeoBundle "easymotion/vim-easymotion"
-NeoBundle 'nathanaelkane/vim-indent-guides'
+" インデントの階層を可視化してくれるが，ちょっと派手になりがち
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+" インデントの階層をラインで可視化してくれる，が微妙
+"NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'nanotech/jellybeans.vim'
 "
