@@ -49,11 +49,13 @@ NeoBundle "osyo-manga/unite-quickfix"
 "
 NeoBundle "easymotion/vim-easymotion"
 " インデントの階層を可視化してくれるが，ちょっと派手になりがち
-"NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 " インデントの階層をラインで可視化してくれる，が微妙
 "NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'nanotech/jellybeans.vim'
+" 閉じカッコに関する動作をいい感じにする
+NeoBundle 'cohama/lexima.vim'
 "
 "################################################################################
 " プラグインの列挙はここまで
@@ -83,21 +85,24 @@ source ~/dotfiles/vim/vimrc_plugin_config_quickrun.vim
 " -> t_Co = 256とするとちょっといい感じになったのでやっぱり使ってみる
 " -> やっぱりうざい。使用を止める。
 " Vim起動時にvim-indent-guidesも起動する/しない=1/0
-let g:indent_guides_enable_on_vim_startup=0
+let g:indent_guides_enable_on_vim_startup=1
 " ガイドするレベル
 let g:indent_guides_start_level=2
 " 自動での色付けを停止，奇数列と偶数列で色をかえるため
 let g:indent_guides_auto_colors=0
 " 奇数列の色
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444433 ctermbg=darkgray
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#444433 ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=131
 " 偶数列の色
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=blue
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=blue
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=130
 " ターミナルの背景とかで見栄えの良さが変わるので
 " :so $VIMRUNTIME/syntax/colortest.vim を参考にして設定すると良いかも
 " ハイライトする色の変化の幅
-let g:indent_guides_color_change_percent = 30
+let g:indent_guides_color_change_percent = 10
 " 色付けする文字数
-let g:indent_guides_guide_size = 3
+" tabでインデントしていると1と設定してもタブ一個分なのでやっぱりでかい．
+let g:indent_guides_guide_size = 0
 "}}}
 "
 " vim-airlineの設定 {{{

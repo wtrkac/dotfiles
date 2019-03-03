@@ -62,10 +62,10 @@ inoremap <C-F9> <ESC> :TempleteExe<SPACE>
 " 挿入モードでカッコやクォートを入れたときに自動で閉じて
 " カーソルをカッコの次に移動してくれるようにする
 " ちょっと使い勝手がよくないかも？
-inoremap {} {}<LEFT>
-inoremap [] []<LEFT>
-inoremap () ()<LEFT>
-inoremap "" ""<LEFT>
-inoremap '' ''<LEFT>
-inoremap `` ``<LEFT>
-
+"inoremap {} {}<LEFT>
+"inoremap [] []<LEFT>
+"inoremap () ()<LEFT>
+"inoremap "" ""<LEFT>
+"inoremap '' ''<LEFT>
+"inoremap `` ``<LEFT>
+"
